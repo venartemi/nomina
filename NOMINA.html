@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg {
+  background-image: url('/w3images/forestbridge.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+body{
+    background-image: url(E-5uoO3XEAQrN-w.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+<body>
+
+<div class="bgimg">
+
+  <div class="middle">
+    <h1>Para la nómina quedan exactamente:</h1>
+    <hr>
+    <p><div id="time-elapsed"></div></p>
+    <script>
+        var dateToday = new Date(); // YYYY (M-1) D H m s (start time and date from DB)
+        var lastDayOfMonth = new Date(dateToday.getFullYear(), dateToday.getMonth()+1, 0).getDate();
+
+        var daysUntilEndOfMonth = lastDayOfMonth - dateToday.getDate();
+
+        document.getElementById("time-elapsed").innerHTML = daysUntilEndOfMonth+" dia(s) naturales.";
+     
+
+    </script>
+  </div>
+  <div class="bottomleft">
+    <p>Buena suerte.</p>
+    <p></p>
+  </div>
+</div>
+
+</body>
+</html>
